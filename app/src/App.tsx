@@ -69,19 +69,26 @@ function App() {
 
       <pre>{JSON.stringify(user, null, 2)}</pre>
 
-      <button onClick={callApi}>Call Protected API route</button>
-      <button onClick={logout}>Logout</button>
+      <button onClick={callApi} className="p-2 border border-black mx-2">
+        Call Protected API route
+      </button>
+      <button onClick={logout} className="p-2 border border-black mx-2">
+        Logout
+      </button>
     </>
   ) : (
     <>
       {error && <p>Error: {error.message}</p>}
 
-      <button onClick={signup}>Signup</button>
+      <button onClick={signup} className="p-2 border border-black mx-2">
+        Signup
+      </button>
 
       <button
         onClick={() => {
           login();
         }}
+        className="p-2 border border-black mx-2"
       >
         Login
       </button>
